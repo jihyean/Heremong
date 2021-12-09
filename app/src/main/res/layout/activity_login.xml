@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="50dp"
+    android:orientation="vertical"
+    tools:context=".login.LoginActivity">
+
+    <TextView
+        android:id="@+id/text_login1"
+        android:text="위드펫에 로그인 하세요."
+         android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/userid1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="User ID"
+        android:layout_below="@+id/text_login1"
+        android:layout_marginTop="50dp"
+        />
+
+    <EditText
+        android:id="@+id/password1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/userid1"/>
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/password1"/> //누르면 로그인됨
+
+    <Button
+        android:id="@+id/btnregs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/btnlogin"/> //누르면 회원가입'창'으로 이동함
+
+
+</RelativeLayout>

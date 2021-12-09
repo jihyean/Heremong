@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".home.Fragment_Home">
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<!--스크롤뷰는 하나의 레이아웃만을 자식으로 받을수있다-->
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            android:id="@+id/edit_search"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:minLines="10"
+            android:inputType="textCapSentences"
+            android:enabled="true"
+            android:hint="이곳에서 장소를 검색하세요"
+
+
+
+            />
+    <com.smarteist.autoimageslider.SliderView
+
+        android:id="@+id/image_slider"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+
+        app:sliderAnimationDuration="600"
+        app:sliderAutoCycleDirection="right"
+        app:sliderAutoCycleEnabled="true"
+        app:sliderIndicatorAnimationDuration="600"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="2dp"
+        app:sliderIndicatorSelectedColor="#5A5A5A"
+        app:sliderIndicatorUnselectedColor="#FFF"
+        app:sliderScrollTimeInSec="4"
+        app:sliderStartAutoCycle="true"
+        tools:layout_editor_absoluteX="-16dp"
+        />
+
+
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#F7FFFFFF"
+        android:paddingTop="40dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="이런 장소는 어떠세요?"
+                        android:textAllCaps="true"
+                        android:textSize="17sp"
+                        android:padding="8dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="추천 플레이스"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:padding="8dp"/>
+
+                </RelativeLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/my_recycler_Home"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+
+            <ImageButton
+                android:id="@+id/Btn_retorant"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/restorant"
+                />
+            <ImageButton
+                android:id="@+id/Btn_CAfe"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/Btn_retorant"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/cafe0001"
+                />
+            <ImageButton
+                android:id="@+id/Btn_Park"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/Btn_retorant"
+                android:layout_marginLeft="60dp"
+                android:background="@drawable/mall"
+                />
+
+        </RelativeLayout>
+
+
+
+
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:background="#ffffff">
+
+          <Button
+                android:id="@+id/Btn_ToCustomise"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="right"
+              android:layout_margin="16dp"
+              android:text="맞춤 검색"
+              android:textAllCaps="false" />
+      </LinearLayout>
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

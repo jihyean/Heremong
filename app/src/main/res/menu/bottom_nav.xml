@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_Home"
+        android:icon="@drawable/home_btn"
+        android:title="홈" />
+
+    <item
+        android:id="@+id/navigation_Map"
+        android:icon="@drawable/map_btn"
+        android:title="지도" />
+
+<!--    <item-->
+<!--        android:id="@+id/navigation_Customized"-->
+<!--        android:icon="@drawable/ic_baseline_list_24"-->
+<!--        android:title="맞춤" />-->
+
+    <item
+        android:id="@+id/navigation_Like"
+        android:icon="@drawable/like_btn"
+        android:title="찜" />
+
+    <item
+        android:id="@+id/navigation_MyPage"
+        android:icon="@drawable/mypgpe_btn"
+        android:title="마이 페이지" />
+
+
+</menu>
